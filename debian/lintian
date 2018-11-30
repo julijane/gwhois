@@ -1,0 +1,3 @@
+# existence of update-inetd is checked before it is invoked
+gwhois: maintainer-script-needs-depends-on-update-inetd postinst
+gwhois: maintainer-script-needs-depends-on-update-inetd prerm

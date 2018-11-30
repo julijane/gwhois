@@ -1,0 +1,1587 @@
+#: version 20120626
+#  see end of file for copyright notices and changelog
+
+# Redirect-Targets (for specifying query modifiers)
+# --------------------------------------------------------------------
+:none||
+^redirect:
+
+# IPv4
+# --------------------------------------------------------------------
+
+# RIRs
+
+# RIPE
+:whois|whois.ripe.net
+=2/8
+=5/8
+=24.132/14
+=25/8
+=31/8
+=37/8
+=46/8
+=51/8
+=62/8
+=77/8
+=78/7
+=80/4
+=109/8
+=141/8
+=145/8
+=151/8
+=176/8
+=178/8
+=185/8
+=188/8
+=193/8
+=194/7
+=212/7
+=217/8
+
+# APNIC
+:whois|whois.apnic.net
+=1/8
+=14/8
+=27/8
+=36/8
+=39/8
+=42/8
+=49/8
+=58/7
+=60/7
+=101/8
+=103/8
+=110/7
+=112/5
+=120/6
+=124/7
+=126/8
+=133/8
+=150/8
+=153/8
+=163/8
+=169.208/12
+=171/8
+=175/8
+=180/8
+=182/7
+=202/7
+=210/7
+=218/7
+=220/6
+
+# Latin American and Caribbean IP address Regional Registry
+:whois|whois.lacnic.net
+=177/8
+=179/8
+=181/8
+=186/7
+=189/8
+=190/7
+=200/8
+=201/8
+
+# African IP address Regional Registry
+:whois|whois.afrinic.net
+=41/8
+=81.10.0/19
+=81.91.224/20
+=102/8
+=105/8
+=154/8
+=155.232/13
+=165.143/16
+=165.165/16
+=193.95.0/17
+=195.24.192/19
+=195.166.224/19
+=195.202.64/20
+=196/7
+=202.123/19
+=212.0.128/22
+=213.55.64/19
+=213.131.64/24
+=213.163.96/25
+=213.150.96/19
+=213.154.64/19
+=213.158.160/23
+=213.172.128/19
+=213.179.160/19
+=213.193.32/19
+=213.212.192/19
+=217.64.96/20
+
+# below RIR
+
+# Australia(?)
+:whois|whois.connect.com.au
+=210.8/7
+=210.10/7
+
+# Japan
+:whois|whois.nic.ad.jp|trailer=/e
+=61.192/12
+=61.208/13
+=202.23/16
+=202.24/14
+=202.208/12
+=202.224/11
+=203.136/14
+=203.140/15
+=203.178/15
+=203.180/14
+=210.136/13
+=210.144/12
+=210.160/12
+=210.188/14
+=210.196/14
+=210.224/12
+=210.248/13
+=211.0/12
+=211.16/14
+=211.120/13
+=211.128/13
+=211.140/14
+=211.144/14
+=218.216/14
+=218.220/14
+=218.224/13
+
+# Korea
+:whois|whois.nic.or.kr
+=61.72/13
+=61.80/14
+=61.84/15
+=61.96/12
+=61.248/13
+=203.224/11
+=210.90/15
+=210.92/14
+=210.96/11
+=210.128/13
+=210.178/15
+=210.180/14
+=210.204/14
+=210.216/13
+=211.32/11
+=211.104/13
+=211.112/13
+=211.168/15
+=211.170/15
+=211.172/14
+=211.176/12
+=211.192/10
+=218.36/14
+=218.48/13
+=218.144/12
+=218.232/13
+=220.72/13
+=220.80/13
+
+# Taiwan
+:whois|whois.twnic.net
+=61.216/13
+=61.224/13
+=210.17.0/17
+=210.59/16
+=210.60/14
+=210.65/16
+=210.66/15
+=210.70/15
+=210.240/14
+=211.20/14
+=211.72/14
+=218.32/16
+=218.160/14
+=218.164/15
+
+# Brazil
+:whois|whois.registro.br
+=200.128/9
+
+
+# ip last resort / everything else
+:whois|whois.arin.net|prefix=z + |
+=0/0
+
+
+# IPv6
+# --------------------------------------------------------------------
+
+# 6Bone v6
+:whois|whois.6bone.net
+3ffe:
+-6bone$
+
+# apnic v6
+:whois|whois.apnic.net
+2001:(0[23cdef]|4[45]|[89ab][0-9a-f])[0-9a-f][0-9a-f]:
+240[0-9a-f]:
+
+# afrinic v6
+:whois|whois.afrinic.net
+2001:4[23][0-9a-f][0-9a-f]:
+
+# ripe v6
+:whois|whois.ripe.net
+2001:(0[6789ab]|1[4567abcdef]|2[0-9a-f]|3[012345689ab]|4[0167abcd]|5[0-9a-f])[0-9a-f][0-9a-f]:
+2a0[0-9a-f]:
+
+# lacnic v6
+:whois|whois.lacnic.net
+2001:1[23][0-9a-f][0-9a-f]:
+
+# other v6, try arin
+:whois|whois.arin.net|prefix=z + |
+.:
+
+
+# ccTLD
+# --------------------------------------------------------------------
+
+:cgi|http://www.nic.ac/cgi-bin/whois?query=~query~
+\.ac$
+
+:notice||A list of registered domains is available on http://www.nic.ad/index_eng.htm [9/2006]
+\.ad$
+
+:whois|whois.aeda.net.ae
+\.ae$
+
+:whois|whois.nic.af
+\.af$
+
+:whois|whois.nic.ag
+\.ag$
+
+:whois|whois.ai
+\.ai$
+
+:notice||No whois. Homepage http://www.nic.al. Availability check on http://www.ert.gov.al/ert_eng/domain_res.html [5/2010]
+\.al$
+
+:whois|whois.nic.am
+\.am$
+
+:notice||A list of registered domains is available on http://www.una.an/an_domreg/an.doc [2/2008]
+\.an$
+
+:notice||No whois. Homepage http://www.dns.ao [5/2010]
+\.ao$
+
+:notice||No whois, no domain list, no nothing. [5/2010]
+\.aq$
+
+#fixme
+:cgipost|http://www.riu.edu.ar/cgi-bin/verdom.pl.nuevo|username=~1~
+(.*)\.edu\.ar$
+
+:cgipostcurl|http://www.nic.ar/consdom.html|nombre=~1~&dominio=~2~
+(.*)(\.[^\.]*\.ar)$
+
+:whois|whois.nic.as
+\.as$
+
+:whois|whois.nic.at
+\.at$
+
+:whois|whois.aunic.net
+\.au$
+
+:notice||No whois, no domain list. Homepage http://www.setar.aw/ [5/2010]
+\.aw$
+
+:notice||No whois. Homepage http://www.regeringen.ax/axreg/ [5/2010]
+\.ax$
+
+:cgipostcurl|http://www.whois.az/cgi-bin/whois.cgi|lang=en&domain=~namewotld~&dom=.az
+\.az$
+
+:notice||See http://www.nic.ba/stream/whois/, needs a image capable browser, therefore gwhois can't use this. [5/2010]
+\.ba$
+
+:notice||Captcha protected whois on http://www.barbadosdomains.net/search_domain.php [5/2010]
+\.bb$
+
+:notice||Whois gone, homepage listed in IANA registry gone. [5/2010]
+\.bd$
+
+:whois|whois.dns.be
+\.be$
+
+#fixme
+:notice||It seems there was a whois server, but now its gone. (last checked Sep 2005)
+\.bf$
+
+:whois|whois.register.bg
+\.bg$
+
+#hier
+:cgipost|http://oldinet.arabian.net/include/domaincheckmodule.asp|txtWebDomain=~query~
+\.bh$
+
+:wwwbi|http://whois.nic.bi/register/whois.hei|name="card" value="(.*?)"
+\.bi$
+
+:whois|www.nic.bj
+\.bj$
+
+:wwwbm|http://207.228.133.14/cgi-bin/lansaweb?procfun+BMWHO+BMWHO2+WHO|ACTION="(.*?)"
+\.bm$
+
+:notice||No whois, no domain list. Homepage http://www.brunet.bn/ (last checked Sep 2005)
+\.bn$
+
+:cgi|http://www.nic.bo/buscar.php?dominio=~1~&subdominio=.~2~.bo
+(.*)\.(com|edu|gov|int|org|net|mil|tv)\.bo$
+
+:cgi|http://www.nic.bo/buscar.php?dominio=~1~&subdominio=.bo
+(.*)\.bo$
+
+:whois|registro.br
+\.br$
+
+:cgipost|http://www.nic.bs/cgi-bin/search.pl|name=~query~
+\.bs$
+
+:cgi|http://www.nic.bt/mwhois.php?domainbt=~namewotld~
+\.bt$
+
+:notice||.bv is unused as per norwegian nic. See http://www.norid.no/domenenavnbaser/bv-sj.html (last checked Jan 2005)
+\.bv$
+
+:notice||No whois, no domain list, no nothing. (last checked Sep 2005)
+\.bw$
+
+:cgi|http://www.tld.by/cgi-bin/registry.cgi?domain=~namewotld~&lang=e&mode=slquest
+\.by$
+
+:wwwbz|http://www.belizenic.bz/cgi-bin/Registrar_test?action=whois&action2=whois&domain=
+\.bz$
+
+:whois|whois.cira.ca
+\.ca$
+
+:inicwhois|whois.nic.cc
+\.cc$
+
+:whois|whois.nic.cd
+\.cd$
+
+:whois|whois.socatel.cf
+\.cf$
+
+:cgipost|http://www.nic.cg/cgi-bin/whois.pl|DOMAINWHOIS=~query~
+\.cg$
+
+:whois|whois.nic.ch
+\.ch$
+
+:whois|whois.nic.ci
+\.ci$
+
+:whois|whois.nic.ck
+\.ck$
+
+:whois|whois.nic.cl
+\.cl$
+
+:whois|whois.ripe.net
+\.cm$
+
+:whois|whois.cnnic.cn
+\.cn$
+
+:whois|whois.nic.co
+\.co$
+
+:cgipost|http://www.nic.cr/servlet/niccr?tid=TWhois&Lng=1&Act=REL&submit=consultar|codtipdom=~2~&dominio=~1~&_formClass=com.niccr.form.TConsultaDomForm&_formName=TConsultaDomForm
+(.*)\.(co|or|fi|ac|ed|go|sa)\.cr$
+(.*)()\.cr$
+
+:cgi|http://www.nic.cu/consultas/infdomain.asp?Dominio=~query~
+\.cu$
+
+:cgi|http://www.dns.cv/cgi-bin/verifica-tld-pub.cgi?dominio=~query~
+\.cv$
+
+:whois|whois.nic.cx
+\.cx$
+
+:cgi|http://www.nic.cy/nslookup/dns_get_record.php?search=~1~&what=~2~&submit=Search
+(.*)\.([^\.]*)\.cy$
+(.*)()\.cy$
+
+:whois|whois.nic.cz
+\.cz$
+
+:whois|whois.denic.de|prefix=-T ace,dn |
+\.de$
+
+:notice||No whois, no domain list. Homepage http://www.adjib.dj/ (last checked Sep 2005)
+\.dj$
+
+:whois|whois.dk-hostmaster.dk|prefix=--show-handles |
+\.dk$
+
+:whois|whois.nic.dm
+\.dm$
+
+:cgipost|http://ns.nic.do/whois.php3|T1=~1~&do=~2~
+(.*)\.((?:com|art|net|gov|org|edu|sld|mil|web)\.do)$
+(.*)\.(do)$
+
+:cgi|http://www.eldjazair.dz/template/rechercherdomaine.php?domain_name=~1~&domaine=~2~
+(.*)(\.(?:com|org|asso|art|edu|gov|pol)\.dz)$
+(.*)(\.dz)$
+
+:cgi|http://www.nic.ec/reg/eng/whois.asp?dominio=~query~
+\.ec$
+
+:whois|whois.eenet.ee
+\.ee$
+
+:notice||No whois, no domain list. Homepage http://www.egregistry.eg/ (2/2008)
+\.eg$
+
+:notice||No whois, no domain list, no nothing. (last checked Sep 2005)
+\.eh$
+
+:notice||No whois, no domain list. Homepage probably http://www.noc.net.er/ (last checked Sep 2005)
+\.er$
+
+#:cgihttps|https://www.nic.es/esnic/servlet/WhoisControllerHTML?dominio=~query~
+:notice||For captcha-secured whois please see http://www.nic.es/ (9/2009)
+\.es$
+
+:notice||No whois, no domain list. Homepage http://www.telecom.net.et/ (last checked Sep 2005)
+\.et$
+
+:whois|whois.eu
+\.eu$
+
+:whois|whois.ficora.fi
+\.fi$
+
+:whois|whois.domains.fj
+\.fj$
+
+:notice||No whois, no domain list. Homepage http://www.fidc.org.fk/ (last checked Sep 2005)
+\.fk$
+
+:cgi|http://www.dot.fm/query_whois.cfm?domain=~namewotld~&tld=fm
+\.fm$
+
+:cgi|http://www.nic.fo/custom2/lookup/domain.asp?domainname=~query~
+\.fo$
+
+:whois|whois.nic.fr
+\.fr$
+
+:notice||No whois, no domain list. Homepage http://www.nic.ga/ (last checked Sep 2005)
+\.ga$
+
+:notice||Reserved Domain as per IANA. (last checked Sep 2005)
+\.gb$
+
+:whois|whois.adamsnames.com
+\.gd$
+
+:cgipost|http://www.registration.ge/index.php?page=11&lang=geo|whois_search=~namewotld~&domainEnd=.ge
+\.ge$
+
+:notice||No whois, no domain list. Homepage http://www.nplus.gf/ (last checked Sep 2005)
+\.gf$
+
+:whois|whois.gg
+\.gg$
+
+:wwwgh| 
+\.gh$
+
+:whois|whois2.afilias-grs.net
+\.gi$
+
+:whois|whois.nic.gl
+\.gl$
+
+:whois|whois.ripe.net
+\.gm$
+
+:notice||No whois, no domain list. Homepage http://psg.com/dns/gn (2/2008)
+\.gn$
+
+:whois|whois.nic.gp
+\.gp$
+
+:notice||No whois, no domain list. Homepage http://www.getesa.gq/ (last checked Sep 2005)
+\.gq$
+
+:cgipostcurl|https://grweb.ics.forth.gr/Whois|domainName=~query~&lang=en
+\.gr$
+
+:whois|whois.nic.gs
+\.gs$
+
+:cgi|http://www.gt/cgi-bin/whois.cgi?domain=~query~
+\.gt$
+
+:notice||.gu nic has a rather complicated search engine which gwhois can't use. See: http://gadao.gov.gu/domainsearch.htm
+\.gu$
+
+:notice||No whois, no domain list, no nothing. (last checked Sep 2005)
+\.gw$
+
+:whois|whois.registry.gy
+\.gy$
+
+:whois|whois.hkdnr.net.hk
+\.hk$
+
+:whois|whois.registry.hm
+\.hm$
+
+:whois|whois2.afilias-grs.net
+\.hn$
+
+:cgipost|http://www.dns.hr/asp/traziFOdomenu.asp|Upit=~1~&Submit2=Tra%BEi
+(.*)\.iz\.hr$
+
+:cgipost|http://hr-t.dns.hr/php/search.php|domena=~1~&Submit=Tra%BEi
+(.*)\.com\.hr$
+
+:cgipost|http://www.dns.hr/asp/trazidomenu.asp|Upit=~namewotld~&Submit2=Tra%BEi
+\.hr$
+
+:cgi|http://www.nic.ht/info/whois.cfm?domain=~query~
+\.ht$
+
+:whois|whois.nic.hu
+\.hu$
+
+:cgipost|http://www.idnic.net.id/cgi-bin/whois.cgi|domain=~1~&induk=~2~
+(.*)\.((?:web|sch|or|co|ac|war\.net|net|mil|go)\.id)$
+
+:whois|whois.domainregistry.ie
+\.ie$
+
+:whois|whois.isoc.org.il
+\.il$
+
+:whois|whois.nic.im
+\.im$
+
+:whois|whois.registry.in
+\.in$
+
+:whois|whois.nic.io
+\.io$
+
+:notice||No whois, no domain list, no nothing. (last checked Sep 2005)
+\.iq$
+
+:whois|whois.nic.ir
+\.ir$
+
+:whois|whois.isnet.is
+\.is$
+
+:whois|whois.nic.it
+\.it$
+
+:whois|whois.je
+\.je$
+
+:notice||No whois, no domain list, no nothing. (last checked Sep 2005)
+\.jm$
+
+:cgi|http://www.nis.gov.jo/pls/dns/jo_organization_info?dom=~1~&subd=~2~
+(.*)\.(com|edu|org|gov|net)\.jo$
+
+:cgi|http://www.nis.gov.jo/pls/dns/jo_organization_info?dom=~1~&subd=-
+(.*)\.jo$
+
+:whois|whois.jp|trailer=/e
+\.jp$
+
+:whois|whois.kenic.or.ke
+\.ke$
+
+:cgipostcurl|http://www.domain.kg/cgi-bin/whois.cgi|whois=~ucquery~
+\.kg$
+
+:notice||No whois, no domain list. Homepage http://www.mptc.gov.kh/Reculation/dns_reualation.htm (last checked Sep 2005)
+\.kh$
+
+:whois|whois.nic.ki
+\.ki$
+
+:notice||No whois, no domain list. Homepage http://www.domaine.km/ (last checked Sep 2005)
+\.km$
+
+:notice||No whois, no domain list, no nothing. (last checked Sep 2005)
+\.kn$
+
+:whois|whois.kcce.kp
+\.kp$
+
+:whois|whois.nic.or.kr
+\.kr$
+
+:cgipost|http://www.kw/mainrs.asp|domname=~1~&domtype=~2~
+(.*)\.((?:com|edu|gov|net|org)\.kw)$
+(.*)\.(kw)$
+
+:cgipost|http://kynseweb.messagesecure.com/whois.asp|domain_name_pref=~1~&domain_name_suff=~2~
+(.*)(\.(?:com|net|org|gov|edu)\.ky)$
+(.*)(\.ky)$
+
+:whois|whois.nic.kz
+\.kz$
+
+:whois|whois.nic.la
+\.la$
+
+:cgi|http://www.aub.edu.lb/cgi-bin/lbdr.pl?cn=~query~
+\.lb$
+
+:whois|whois2.afilias-grs.net
+\.lc$
+
+:whois|whois.nic.li
+\.li$
+
+:cgipost|http://www.nic.lk/cgi-bin/searchdomModified.cgi|domain=~1~&seclev=~2~
+(.*)(\.(?:assn|com|edu|grp|hotel|ltd|ngo|org|soc|web|gov|int|net|sch)\.lk)$
+(.*)(\.lk)$
+
+:notice||No whois, no domain list. Homepage http://psg.com/dns/lr (last checked Sep 2005)
+\.lr$
+
+:notice||No whois, no domain list. Homepage for .co.ls and .org.ls: http://www.co.ls/ (last checked Sep 2005)
+\.ls$
+
+:whois|whois.domreg.lt
+\.lt$
+
+:whois|whois.restena.lu
+\.lu$
+
+:whois|whois.nic.lv
+\.lv$
+
+:whois|whois.nic.ly
+\.ly$
+
+:whois|whois.iam.net.ma
+\.ma$
+
+:whois|whois.ripe.net
+\.mc$
+
+:notice||Whois is secured by a captcha, please check yourself on http://www.nic.md/ (02/2008)
+\.md$
+
+:whois|whois.nic.me
+\.me$
+
+:whois|whois.nic.mg
+\.mg$
+
+:notice||No whois, no domain list. Homepage http://www.nic.net.mh/ (last checked Sep 2005)
+\.mh$
+
+:notice||No whois, no domain list. Homepage http://www.mpt.com.mk/ (broken as of Sep 2005)
+\.mk$
+
+:notice||No whois, no domain list. Homepage http://www.sotelma.ml/ (last checked Sep 2005)
+\.ml$
+
+:notice||Whois gone, homepage as well. Was http://www.nic.mm/ (2/2008)
+\.mm$
+
+:whois|whois2.afilias-grs.net
+\.mn$
+
+:notice||Captcha-protected whois on Homepage http://www.monic.net.mo/ (last checked Sep 2005)
+\.mo$
+
+:notice||No whois, no domain list. Homepage http://www.nic.mp/ (last checked Sep 2005)
+\.mp$
+
+:notice||No whois, no domain list. Homepage http://www.nic.mq/ (broken as of Sep 2005)
+\.mq$
+
+:notice||No whois, no domain list. Homepage http://www.nic.mr/ (2/2008)
+\.mr$
+
+:whois|whois.nic.ms
+\.ms$
+
+:whois|whois.nic.mt
+\.mt$
+
+:whois|whois.nic.mu
+\.mu$
+
+:notice||No whois, no domain list, no nothing. (last checked Sep 2005)
+\.mv$
+
+:cgi|http://www.registrar.mw/index.php?domain=~query~
+\.mw$
+
+:whois|whois.nic.mx
+\.mx$
+
+:whois|whois.mynic.net.my
+\.my$
+
+:notice||No whois, no domain list. Homepage http://www.ci.uem.mz/ (last checked Sep 2005)
+\.mz$
+
+:whois|whois.na-nic.com.na
+\.na$
+
+:notice||Captcha protected whois on http://www.domaine.nc/. Good look trying to read the captcha. (2/2008)
+\.nc$
+
+:notice||No whois, no domain list. Homepage http://www.intnet.ne/ (last checked Sep 2005)
+\.ne$
+
+:notice||No whois, domain availability can be checked on https://secure.nf/ (2/2008)
+\.nf$
+
+:notice||No whois, no domain list. Homepage http://psg.com/dns/ng (last checked Sep 2005)
+\.ng$
+
+:notice||No (usable) whois. Partial domain list at homepage http://www.nic.ni/ (last checked Sep 2005)
+\.ni$
+
+:whois|whois.domain-registry.nl
+\.nl$
+
+:whois|whois.norid.no
+\.no$
+
+:cgi|http://www.mos.com.np/cgi-bin/search.cgi?domain_name=~query~
+\.np$
+
+# broken as of Jan 2005
+:cgi|http://www.cenpac.net.nr/dns/whois.html?subdomain=~query~
+\.nr$
+
+:whois|whois.nic.nu
+\.nu$
+
+:whois|whois.srs.net.nz
+\.nz$
+
+:cgipost|http://www.omnic.om/onlineUser/whoisMain.jsp|domainName=~1~&domainCategory=~2~&sourcePage=WHOISLookup
+(.*)(\.(?:com|edu|gov|mil|net|org|med|co))\.om$
+
+:cgi|http://www.nic.pa/whois.php?nombre_d=~query~
+\.pa$
+
+:wwwpe|http://www.nic.pe/rpublicac-i.php?txtbuscar=~query~&radopcion=D|(detpublic-i.php.*?)'
+\.pe$
+
+:notice||No whois, no domain list. Homepage http://www.mana.pf/ (last checked Sep 2005)
+\.pf$
+
+:notice||No whois, no domain list. Homepage http://www.unitech.ac.pg/Unitech_General/ITS/ITS_Dns.htm (last checked Jan 2005)
+\.pg$
+
+:cgi|http://www.domains.ph/WhoIs.asp?Domain=~query~
+\.ph$
+
+:cgihttps|https://pknic.net.pk/cgi-bin/pknic-db/display.html?text=on&name=~query~
+\.pk$
+
+:whois|dns.pl
+\.pl$
+
+:whois|whois.nic.fr
+\.pm$
+
+:cgipost|http://www.pitcairn.pn/cgi-bin/domainNameCheck.cgi|dname=~1~&subdomain=~2~
+(.*)\.((?:co|net|org)\.pn)$
+(.*)\.(pn)$
+
+:whois|whois.uprr.pr
+\.pr$
+
+:cgipost|http://www.pnina.ps/whois/domain_whois.php|dname=~query~
+\.ps$
+
+:whois|whois.dns.pt
+\.pt$
+
+:notice||No whois, no domain list. Homepage http://www.pwregistry.pw/ (2/2008)
+\.pw$
+
+:cgipostcurl|http://www.nic.py/cgi-nic/consultas/domdetzzz|dom=~1~&tip=~2~
+(.*)\.([^\.]*)\.py$
+(.*)()\.py
+
+:notice||No whois, no domain list. Homepage http://www.qatar.net.qa/ (last checked Sep 2005)
+\.qa$
+
+:whois|whois.nic.re
+\.re$
+
+:whois|whois.rotld.ro
+\.ro$
+
+:notice||No whois, no domain list. Homepage http://www.nic.rs (last checked Sep 2007)
+\.rs$
+
+:whois|whois.ripn.net
+\.ru$
+
+:cgipost|http://www.nic.rw/cgi-bin/whois.pl|DOMAINWHOIS=~query~
+\.rw$
+
+:whois|whois.saudinic.net.sa
+\.sa$
+
+:whois|whois.nic.net.sb
+\.sb$
+
+:whois|whois2.afilias-grs.net
+\.sc$
+
+:notice||No whois, no domain list. Homepage http://www.sdnic.sd/ (2/2008)
+\.sd$
+
+:whois|whois.nic-se.se
+\.se$
+
+:whois|whois.nic.net.sg
+\.sg$
+
+# whois server available but broken as of Jan 2005
+#:whois|whois.nic.sh
+:cgi|http://www.nic.sh/cgi-bin/whois?query=~query~
+\.sh$
+
+:whois|whois.arnes.si
+\.si$
+
+:notice||.sj is unused as per norwegian nic. See http://www.norid.no/domenenavnbaser/bv-sj.html (last checked Sep 2005)
+\.sj$
+
+:whois|whois.sk-nic.sk
+\.sk$
+
+:notice||No whois, no domain list. Homepage http://sierratel.sl/domain/ (last checked Sep 2005)
+\.sl$
+
+:whois|whois.ripe.net
+\.sm$
+
+:notice||Whois on http://www.nic.sn, not working. (2/2008)
+\.sn$
+
+:notice||No whois, no domain list. Homepage http://www.nic.so/ (last checked Sep 2005)
+\.so$
+
+:notice||Whois gone, homepage http://www.sr.net (2/2008)
+\.sr$
+
+:whois|whois.nic.st
+\.st$
+
+:whois|whois.ripn.net
+\.su$
+
+:notice||No whois, no domain list. Availability check on http://www.svnet.org.sv/ (2/2008)
+\.sv$
+
+:notice||No whois, no domain list. Homepage http://www.ste.gov.sy/ (last checked Sep 2005)
+\.sy$
+
+:notice||No whois, no domain list. Homepage http://www.sispa.org.sz/ (last checked Sep 2005)
+\.sz$
+
+:whois|whois.adamsnames.tc
+\.tc$
+
+:notice||No whois, no domain list. Homepage http://www.sotel.td/ (last checked Sep 2005)
+\.td$
+
+:whois|whois.nic.tf
+\.tf$
+
+:cgipost|http://www.nic.tg/nictg/indexplus.php?pg=verifdom&op=whois|tosearch=~namewotld~&typedom=.tg
+\.tg$
+
+:whois|whois.thnic.net
+\.th$
+
+:cgi|http://www.nic.tj/cgi/lookup?DOMAIN=~namewotld~
+\.tj$
+
+:whois|whois.dot.tk
+\.tk$
+
+:whois|whois.nic.tl
+\.tl$
+
+:whois|whois.nic.tm
+\.tm$
+
+:cgipost|http://whois.ati.tn/index.php|domain=~1~&ext=2&action=whois&submit=ok
+(.*)\.com\.tn$
+
+:cgipost|http://whois.ati.tn/index.php|domain=~1~&ext=5&action=whois&submit=ok
+(.*)\.ens\.tn$
+
+:cgipost|http://whois.ati.tn/index.php|domain=~1~&ext=6&action=whois&submit=ok
+(.*)\.fin\.tn$
+
+:cgipost|http://whois.ati.tn/index.php|domain=~1~&ext=7&action=whois&submit=ok
+(.*)\.gov\.tn$
+
+:cgipost|http://whois.ati.tn/index.php|domain=~1~&ext=9&action=whois&submit=ok
+(.*)\.ind\.tn$
+
+:cgipost|http://whois.ati.tn/index.php|domain=~1~&ext=10&action=whois&submit=ok
+(.*)\.intl\.tn$
+
+:cgipost|http://whois.ati.tn/index.php|domain=~1~&ext=11&action=whois&submit=ok
+(.*)\.nat\.tn$
+
+:cgipost|http://whois.ati.tn/index.php|domain=~1~&ext=12&action=whois&submit=ok
+(.*)\.net\.tn$
+
+:cgipost|http://whois.ati.tn/index.php|domain=~1~&ext=14&action=whois&submit=ok
+(.*)\.org\.tn$
+
+:cgipost|http://whois.ati.tn/index.php|domain=~1~&ext=15&action=whois&submit=ok
+(.*)\.info\.tn$
+
+:cgipost|http://whois.ati.tn/index.php|domain=~1~&ext=16&action=whois&submit=ok
+(.*)\.person\.tn$
+
+:cgipost|http://whois.ati.tn/index.php|domain=~1~&ext=17&action=whois&submit=ok
+(.*)\.tourism\.tn$
+
+:cgipost|http://whois.ati.tn/index.php|domain=~1~&ext=18&action=whois&submit=ok
+(.*)\.edunet\.tn$
+
+:cgipost|http://whois.ati.tn/index.php|domain=~1~&ext=19&action=whois&submit=ok
+(.*)\.rnrt\.tn$
+
+:cgipost|http://whois.ati.tn/index.php|domain=~1~&ext=20&action=whois&submit=ok
+(.*)\.rns\.tn$
+
+:cgipost|http://whois.ati.tn/index.php|domain=~1~&ext=21&action=whois&submit=ok
+(.*)\.rnu\.tn$
+
+:cgipost|http://whois.ati.tn/index.php|domain=~1~&ext=22&action=whois&submit=ok
+(.*)\.mincom\.tn$
+
+:cgipost|http://whois.ati.tn/index.php|domain=~1~&ext=23&action=whois&submit=ok
+(.*)\.agrinet\.tn$
+
+:cgipost|http://whois.ati.tn/index.php|domain=~1~&ext=1&action=whois&submit=ok
+(.*)\.tn$
+
+:whois|whois.tonic.to
+\.to$
+
+:notice||.tp is beeing phased out and replaced with .tl. See http://www.nic.tp/ (last checked Sep 2005)
+\.tp$
+
+:whois|whois.nic.tr
+\.tr$
+
+:cgipost|http://www.nic.tt/cgi-bin/search.pl|name=~query~
+\.tt$
+
+:inicwhois|whois.nic.tv
+\.tv$
+
+:whois|whois.twnic.net.tw
+\.tw$
+
+:notice||No whois, no domain list. Homepage http://psg.com/dns/tz (last checked Sep 2005)
+\.tz$
+
+:whois|whois.net.ua
+\.ua$
+
+:whois|whois.co.ug
+\.ug$
+
+:whois|whois.ja.net
+\.(ac|gov)\.uk$
+
+:whois|whois.nic.uk
+\.uk$
+
+:notice||No whois, no domain list. Homepage http://www.nic.um/ (last checked Sep 2005)
+\.um$
+
+:whois|whois.nic.us
+\.us$
+
+:whois|sepe.rau.edu.uy
+\.uy$
+
+:whois|whois.uz
+\.uz$
+
+:whois|whois.ripe.net
+\.va$
+
+:whois|whois2.afilias-grs.net
+\.vc$
+
+:whois|whois.nic.ve
+\.ve$
+
+#:cgi|http://www.nic.vg/whois/?domain=~query~
+:multiple||cgi::http://www.nic.vg/whois/?domain=~query~:::whois::www.nic.vg
+\.vg$
+
+:cgipost|http://www.nic.vi/whois.asp|text1=~query~
+\.vi$
+
+:cgipostcurl|http://www.tenmien.vn/jsp/jsp/tracuudomainchitiet.jsp?type=~query~
+\.vn$
+
+:cgi|http://www.vunic.vu/whois?~namewotld~
+\.vu$
+
+:whois|whois.nic.wf
+\.wf$
+
+:whois|whois.nic.ws
+\.ws$
+
+:notice||No whois, no domain list. Homepage http://www.nic.gov.ye/ (last checked Sep 2005)
+\.ye$
+
+:whois|whois.nic.yt
+\.yt$
+
+:cgi|http://www.nic.yu/cgi-bin/checkavail.cgi?domain=~1~&suffix=~2~
+(.*)(\.(?:bg\.ac|ac|co|org|edu)\.yu)$
+(.*)(.yu)$
+
+:cgi|http://co.za/cgi-bin/whois.sh?Domain=~query~
+\.co\.za$
+
+:notice||No whois (except .co.za domains). Homepage http://www.zadna.org.za/ (last checked Sep 2005)
+\.za$
+
+:notice||No whois, no domain list. Homepage http://www.zamnet.zm/ser-isp/dns.htm (last checked Sep 2005)
+\.zm$
+
+:cgi|http://www.zispa.org.zw/cgi-bin/search?domain=~query~
+\.co\.zw$
+
+:notice||No whois (except .co.zw domains). No homepage (http://www.zispa.org.zw for .co.zw). (last checked Sep 2005)
+\.zw$
+
+
+# Subdomain-Registries
+# --------------------------------------------------------------------
+
+:whois|whois.eu.org
+\.eu\.org$
+
+:whois|whois.centralnic.net
+\.(br|cn|de|eu|gb|hu|jpn|kr|no|qc|ru|sa|se|uk|us|uy|web|za)\.com$
+\.(gb|se|uk)\.net$
+\.ae\.org$
+
+
+# gTLD and other domain
+# --------------------------------------------------------------------
+
+:whois|whois.aero
+\.aero$
+
+:whois|whois.iana.org
+\.arpa$
+
+# not yet available, shall start after sunrise periode (2/2008)
+:whois|whois.nic.asia
+\.asia$
+
+:whois|whois.nic.biz
+\.biz$
+
+:whois|whois.cat
+\.cat$
+
+:inicwhois|whois.verisign-grs.com
+\.com$
+
+:whois|whois.nic.coop
+\.coop$
+
+:whois|whois.educause.net
+\.edu$
+
+:whois|whois.nic.gov
+\.gov$
+
+:whois|whois.afilias.net
+\.info$
+
+:whois|whois.iana.org
+\.int$
+
+:whois|jobswhois.verisign-grs.com
+\.jobs$
+
+:notice||Whois server gone. (2/2008)
+\.mil$
+
+:whois|whois.dotmobiregistry.net
+\.mobi$
+
+:whois|whois.museum
+\.museum$
+
+:whois|whois.nic.name|prefix=domain=
+\.name$
+
+:inicwhois|whois.verisign-grs.com
+\.net$
+
+:whois|whois.pir.org
+\.org$
+
+:whois|whois.registrypro.pro
+\.pro$
+
+:whois|whois.nic.tel
+\.tel$
+
+:whois|whois.nic.travel
+\.travel$
+
+
+# Handles and misc
+# --------------------------------------------------------------------
+
+:whois|whois.apnic.net
+-ap$
+
+:whois|whois.ra.net
+^as\d+$
+^as\d+\.\d+$
+^fltr-
+
+:whois|whois.nic.at
+^at\d+$
+
+:whois|whois.aunic.net
+-au$
+
+:whois|whois.denic.de|prefix=-T ace,dn |
+^[^.]*-denic$
+
+:whois|whois.dk-hostmaster.dk
+^[^.]*-dk$
+
+:cgi|http://www.nic.es/cgi-bin/consulta.whois?tipo=procesar&list=Personas&key=~query~
+-esnic$
+
+:whois|whois.nic.fr
+^fr-[^.]+$
+
+:whois|whois.isnet.is
+-is$
+
+:whois|whois.nic.ad.jp|trailer=/e
+^[^.]*jp$
+
+:whois|whois.norid.no
+-norid$
+
+:whois|whois.ripn.net
+-ripn$
+
+:whois|whois.ripe.net
+^lim-
+^poem-
+-mnt$
+-ripe$
+-be$
+-domreg$
+^irt-
+^pgpkey-
+
+:whois|whois.gandi.net
+-gandi$
+
+:whois|whois.arin.net|prefix=z + |
+^net(blk)?-[a-z0-9-]+$
+-arin$
+-hst$
+
+# Team Cymru IP->AS mapper whoic
+:whois|whois.cymru.com|strip=ipas |
+ipas\s\S+
+
+:whois|whois.nic.name|prefix=contact=
+-name$
+
+:whois|whois.corenic.net|prefix=contact |
+^co..-\d+$
+
+# TLD lookup on iana.org
+:whois|whois.iana.org|strip=tld |
+tld\s\S+
+
+# SIXXS handles
+:whois|whois.sixxs.net
+-sixxs$
+
+# Nothing
+# --------------------------------------------------------------------
+:notice||If this is a valid domainname or handle, please file a bug report.
+.
+
+#
+#  generic Whois pattern table
+#
+#  (c) 1998-2010 by Juliane Holzt
+#  includes contributions by Lutz Donnerhacke, Cord Beermann,
+#  Florian Weimer and other people. Many thanks.
+#
+#
+#  Distribution, usage etc. pp. regulated by the current version of GPL.
+#  Idea: Erik.Heinz@Jena.Thur.De
+#
+#  Please drop me (debian@julijane.de) any additional records...
+#  (or file a bug against the debian gwhois package).
+#
+# History:
+#
+# 2010-07-28  jule  updated ipv4 netblocks, added/fixed several
+# 2010-07-27  jule  fix arin queries, check and fix ipv6 queries
+#                   (Debian Bug#585072)
+# 2010-05-15  jule  remove charset parameter from DENIC queries
+#                   .pl now has a real whois server again
+# 2009-09-01  jule  .es has no longer a usable WHOIS (captcha needed)
+# 2009-07-17  jule  Added .tel whois (Debian Bug#524675)
+# 2008-09-25  jule  Changed .by URL, same unhelpful output as before
+#		    (Debian Bug#500042)
+# 2008-07-16  jule  Verbose output for .name, tnx John McGowan
+# 2008-06-26  jule  Fixed .ms, tnx Uwe Sinha (Debian Bug#488093)
+# 2008-02-19  jule  Updates based on information by Bernd Hohmann and
+#                   Rick Moen: modified/fixed .af, .ai, .an, .az, .bi, 
+#                   .cf, .ci, .cl, .dk, .ec, .eg, .fj, .gd, .ge, .gi, 
+#                   .gm, .gn, .gp, .gs, .gy, .hn, .hr, .ir, .ki, .kz, 
+#                   .la, .lc, .lk, .ly, .ma, .mc, .mg, .mm, .mn, .mr, 
+#                   .ms, .mt, .mu, .nc, .nf, .pl, .pm, .pw, .py, .sc, 
+#                   .sd, .sm, .sn, .sr, .sv, .tc, .tg, .tl, .tm, .uy, 
+#                   .uz, .vc, .ve, .vn, .ws, .jobs, .mil, .travel
+#                   Added .arpa, .asia (yet defunct), .tel (no whois),
+#                   Subdomain-Whois of Centralnic for certain subdomains
+#                   under .com, .net and .org (e.g. gb.net), Removed .cs
+# 2008-02-18  jule  Added -sixxs (Debian Bug#458470, tnx Christian Seitz),
+# 2007-10-30  jule  Fixed .im, tnx VT100 (Debian Bug#448661)
+# 2007-09-26  jule  added .me (Debian Bug#444198), added .kp, changed .rs
+# 2007-09-05  jule  TLD .va is now included in RIPE database, tnx Mark
+#                   Thomas
+# 2007-08-22  jule  Fixed .de again :-(
+# 2007-04-03  jule  Fixed .de :-(
+# 2007-02-22  jule  Modified/Fixed .as
+# 2007-02-18  jule  Fixed .co and .pk, tnx John McGowan for hints
+# 2007-02-17  jule  Handles ending on '-ap' at apnic
+# 2007-02-16  jule  116/6, 120/8 new to APNIC, added redirect default
+# 2007-01-12  jule  Added lookup for four byte AS numbers (e.g. AS3.1)
+#                   (Debian Bug#406070)
+# 2006-12-06  jule  Broadened regex for lim- (RIPE), added poem- (RIPE).
+#                   (Debian Bug#401542)
+# 2006-12-02  jule  Fixed web lookup for .vg, also added additional query
+#                   of .vg whois server which gives some more information
+#                   (see also new method 'multiple'). Tnx to VT100 for
+#                   hint about changed URL. (Debian Bug#401339)
+# 2006-11-13  jule  Fixed .info, tnx Stefan Schmidt (Debian Bug#397889)
+# 2006-10-02  jule  .mobi now has a whois server (tnx MarcL for hint)
+# 2006-09-20  jule  196/8 now complete Afrinoc (tnx MarcL)
+#                   77/8, 78/8, 79/8 RIPE (new)
+#                   201/8, 189/8, 190/8 LACNIC (not new, shame on me)
+#                   Fixed 122/6 -> 122/7, 124/7 (me = Idiot)
+# 2006-04-19  jule  Added .eu (Debian Bug#351793)
+#                   Fixed .il (Debian Bug#355039)
+#                   Added extensive list of ip networks transfered
+#                   to AFRINIC, many tnx to Axel Rau
+#                   Added .cat, .mobi
+#                   Added 89/8, 90/8, 91/8 to RIPE
+#                   Added 58/7, 121/8, 122/6, 126/8, 169.208/12, 196.192/13 to APNIC
+#                   Added 202.123/19 to AFRINIC
+# 2005-09-25  jule  Fixed/Update .com, .net, .org, .ae, .az, .ly, 
+#                   .pr, .jp (Debian Bug#323569)
+#                   Added .jobs, .travel, .eu, 2a01::/23 (Debian Bug#318382)
+#                   Added lookup 'tld xx' (shows information from iana about a tld)
+# 2005-01-15  jule  Added version string
+# 2005-01-14  jule  A lot of changes and additions (took me 15 hours):
+#
+#                   fixed/updated 
+#                   .ac, .ar, .cd, .co, .cu, .ee, .fi, .ge, 
+#                   .gs, .gt, .ht, .in, .im, .io, .ir, .lk, 
+#                   .lv, .mn, .ms, .mw, .my, .nu, .nz, .pa, 
+#                   .pk, .rw, .se, .sh, .tf, .tm, .tr, .tt,
+#                   .tw, .ua, .ug, .uk, .uz
+#
+#                   added 
+#                   .ai, .ao, .bb, .bd, .bg, .bh, .bi, .bj, 
+#                   .bm, .bo, .bs, .bt, .by, .bz, .cg, .cv, 
+#                   .cy, .dm, .do, .dz, .fj, .fm, .fo, .gg, 
+#                   .gi, .gl, .gm, .gr, .id, .il, .it, .je, 
+#                   .jo, .ke, .kg, .ki, .kw, .ky, .kz, .la, 
+#                   .lt, .md, .mt, .mu, .na, .nf, .nr, .om, 
+#                   .ph, .pn, .py, .re, .ro, .sa, .sb, .si,
+#                   .sk, .sr, .tg, .th, .tn, .ve, .wf, .yt,
+#                   .yu, .zw, .int, .pro
+#
+#                   added notice
+#                   .ad, .ae, .an, .aq, .aw, .ax, .az, .ba, 
+#                   .bf, .bv, .bw, .cf, .ci, .cm, .cs, .dj, 
+#                   .eg, .eh, .er, .et, .fk, .ga, .gf, .gh, 
+#                   .gn, .gp, .gq, .gu, .gw, .gy, .hn, .hr, 
+#                   .iq, .jm, .kh, .km, .kn, .lr, .ls, .ly, 
+#                   .ma, .mc, .mg, .mh, .mk, .ml, .mo, .mp, 
+#                   .mq, .mr, .mv, .mz, .nc, .ne, .ni, .pf, 
+#                   .pg, .pm, .pr, .qa, .sc, .sd, .sj, .sl,
+#                   .sm, .sn, .so, .sv, .sy, .sz, .td, .tm,
+#                   .tp, .va, .vc, .ye, .za, .zm
+#
+#                   removed
+#                   ml.org
+# 2005-01-10  jule  Removed 200.10.4/22, 210.17/16, 210.18/15 and 210.20/16
+#                   from registro.br, now at apnic and twnic
+# 2005-01-06  jule  Changed .tj
+# 2005-01-04  jule  Added IPv6 assignments
+# 2005-01-03  jule  Explicit rule for .com and .net
+#		    added gandi handles, fixed .cr (Debian Bug#239259)
+#                   added irt handles (Debian Bug#239768)
+#                   added pgpkey objects (Debian Bug#239780)
+#                   80/6,84/8 -> 80/5,88/8 ripe (Debian Bug#243149)
+#                   fltr objects (Debian Bug#249312)
+#                   edu added (Debian Bug#255576)
+#                   fixed .pe (Debian Bug#264794)
+#                   fixed .tv (again, suckers!) (Debian Bug#267745)
+# 2004-03-08  jule  *-mnt und lim-* objects queried at ripe.
+# 2004-03-08  jule  193/7 is nonsense, must be 193/8 and 194/8. i'm an
+#                   idiot.
+# 2004-03-07  jule  added team cymru ip->as mapper whois
+# 2004-03-07  jule  removed all ERX listings, which are now autoconverted
+#                   and held in seperate files
+# 2004-03-03  jule  fixed 80-84/8
+# 2004-03-03  jule  publicinterestregistry (.org) now back to normal whois
+#		    changes for new generic whois handling code
+#                   added idn-parameters for denic (Debian Bug#235086)
+#                   added whois-servers.net as last resort (tnx lutz)
+#		    changed corenic handle (Debian Bug#208866)
+#                   .va fixed (Debian Bug#225032)
+#		    added some blocks to RIPE (Debian Bug#225037)
+#                   added some more blocks to RIPE (Debian Bug#226178)
+# 2003-06-25  jule  .cc now REAL fixed :-)
+#		    whois.nic-se.se has incomplete data, changed for cgi
+#                   [tnx Christian Seitz, Erik Heinz]
+# 2003-06-25  jule   192.109/16 now queried at ripe (arin has totally
+#                   outdated data!)
+#		    fixed .as (Debian Bug#195065) and 
+#                   .cc (Debian Bug#196991) [both tnx VT100]
+# 2003-04-09  lutz  added 60/8 and removed 223/8 (apnic)
+# 2003-02-20  jule  changed .nz, changed .ie, added .museum, added .aero
+#                   tnx to Andreas Schoenberg for hints.
+# 2003-02-15  jule  added .us
+# 2003-02-14  lutz  added 222/7 (apnic)
+# 2003-01-29  jule  fixed .be (trailing space)
+# 2003-01-28  jule  added 129.90/16 (lacnic, from lutz), 129.208/16 (ripe)
+# 2003-01-28  lutz  .np added
+# 2003-01-28  tlr   Add $ to .au pattern
+# 2003-01-27  jule  .org now has a totally broken whois 
+# 2003-01-19  cord  added .coop-whois
+# 2003-01-18  f2u   added 130.227.0.0 - 130.227.255.255 (RIPE)
+# 2003-01-08  f2u   added 192.114.0.0 - 192.118.255.255 (RIPE)
+# 2003-01-05  f2u   added 147.233.0.0 - 147.237.255.255 (RIPE)
+# 2003-01-03  f2u   added 156.35.0.0 - 156.35.255.255 (RIPE)
+# 2003-01-02  f2u   Mark ARIN WHOIS.
+# 2002-12-30  cord  added 82.0.0.0-82.255.255.255 to RIPE
+# 2002-11-27  cord  fixed .lu (Debian Bug#170816)
+# 2002-11-01  cord  (Debian Bug#164375)
+#		    203.0.0.0-203.63.255.255 moved from aunic to apnic.
+#							(Debian Bug#166748)
+#		    210.8.0.0-210.11.255.255 is at whois.connect.com.au.
+#		    JAPANESE IPs:
+#		    added 61.192.0.0-61.215.255.255 (Debian Bug#148534,
+#							Debian Bug#165104)
+#		    added 202.208.0.0-202.255.255.255 (Debian Bug#165406)
+#		    added 203.136.0.0-203.141.255.255
+#		    added 210.136.0.0-210.159.255.255
+#		    added 210.188.0.0-210.191.255.255
+#		    added 210.196.0.0-210.199.255.255
+#		    added 210.224.0.0-210.239.255.255 (Debian Bug#138881)
+#		    added 211.8.0.0-211.19.255.255 (Debian Bug#165587)
+#		    added 211.120.0.0-211.135.255.255
+#		    added 218.40.0.0-218.47.255.255
+#		    added 218.216.0.0-218.231.255.255
+#		    KOREAN IPs:
+#		    added 61.248.0.0-61.255.255.255 (Debian Bug#164376)
+#		    added 203.245.0.0-203.255.255.255 (Debian Bug#138718)
+#	   	    added 210.90.0.0-210.91.255.255
+#		    added 210.97.192.0-210.135.255.255
+#		    added 210.220.0.0-210.223.255.255 (Debian Bug#141594)
+#		    added 211.32.0.0-211.63.255.255 (Debian Bug#138717, 
+#							Debian Bug#150750,
+#							Debian Bug#165587)
+#		    added 211.168.0.0-211.171.255.255
+#		    added 211.226.0.0-211.231.255.255 (Debian Bug#138953)
+#		    added 218.36.0.0-218.39.255.255
+#		    added 218.48.0.0-218.55.255.255
+#		    added 218.144.0.0-218.159.255.255
+#		    added 218.232.0.0-218.239.255.255
+#		    added 220.72.0.0-220.87.255.255
+#		    TAIWAN IPs:
+#		    added 61.216.0.0-61.231.255.255 (Debian Bug#165105)
+#		    added 210.17.0.0-210.17.127.255
+#		    added 210.59.0.0-210.63.255.255
+#	       	    added 210.65.0.0-210.67.255.255
+#	    	    added 210.70.0.0-210.71.255.255
+#		    added 211.20.0.0-211.23.255.255 (Debian Bug#165587)
+#		    added 211.72.0.0-211.72.255.255
+#		    added 211.75.0.0-211.75.255.255 (Debian Bug#165587)
+#		    added 218.32.0.0-218.32.255.255
+#		    added 218.160.0.0-218.165.255.255
+#		    APNIC
+#		    added 219.0.0.0-221.255.255.255
+#		    NIC for Latin American and Caribbean 
+#		    added 200.0.0.0-200.255.255.255 (Debian Bug#158859)
+#		    RIPE (Debian Bug#152090)
+#		    added 129.11.0.0-129.13.255.255
+#		    added 129.16.0.0-129.16.255.255
+#		    added 129.20.0.0 - 129.20.255.255
+#		    added 129.26.0.0 - 129.27.255.255
+#		    added 129.31.0.0 - 129.31.255.255
+#		    added 129.35.0.0 - 129.35.255.255
+#		    added 129.67.0.0 - 129.67.255.255
+#		    added 129.69.0.0- 129.70.255.255
+#		    added 129.73.0.0 - 129.73.255.255
+#		    added 129.88.0.0 - 129.88.255.255
+#		    added 129.102.0.0 - 129.104.255.255
+#		    added 129.125.0.0 - 129.125.255.255
+#		    added 129.129.0.0 - 129.129.255.255
+#		    added 129.132.0.0 - 129.132.255.255
+#		    added 129.142.0.0 - 129.143.255.255
+#		    added 129.159.0.0 - 129.159.3.255
+#		    added 129.169.0.0 - 129.169.255.255
+#		    added 129.175.0.0 - 129.175.255.255
+#		    added 129.177.0.0 - 129.178.255.255
+#		    added 129.181.0.0 - 129.185.255.255
+#		    added 129.187.0.0 - 129.187.255.255
+#		    added 129.194.0.0 - 129.195.255.255
+#		    added 129.199.0.0 - 129.199.255.255
+#		    added 129.206.0.0 - 129.206.255.255
+#		    added 129.214.0.0 - 129.215.255.255
+#	 	    added 129.217.0.0 - 129.217.255.255
+#		    added 129.226.0.0 - 129.227.255.255
+#		    added 129.233.0.0 - 129.234.255.255
+#		    added 129.240.0.0 - 129.242.255.255
+#		    added 129.247.0.0 - 129.247.255.255
+#		    whois-server for .ac.uk and .gov.uk added.
+#							(Debian Bug#166785)
+#		    whois-server for .pl added. (Debian Bug#164737)
+#		    RIPE is also responsible for Gambia .gm
+#		    .ar switched urls for requests. (Debian Bug#163210)
+#		    .cl now has a real whois-server.
+#		    .dk has a real whois-server again. (Debian Bug#163181)
+#		    .ec is available through a web interface.
+#		    .es switched urls for requests.
+#	  	    .kr new address for whois-server.
+#		    .name has also an whois-server.
+#		    .pk switched urls for requests.
+#		    .su has a whois-server. (Debian Bug#165610)
+#		    .tw has a whois-server. (Debian Bug#163296)
+#		    .co.za has a whois-server. (Debian Bug#149182)
+#		    .tk has a whois-server. (Debian Bug#165614)
+# 2002-09-17  jule  .ag is now handled by a real whois server
+# 2002-03-14  jule  fixed trailing spaces after some $-signs
+#		    KOREAN IPs:
+#		    added 210.100.0.0-210.103.255.255 (Debian Bug#135341)
+#		    added 210.204.0.0-210.207.255.255 (Debian Bug#135399)
+#		    added 210.116.0.0-210.213.255.255 (Debian Bug#135470)
+#		    added 61.78.0.0-61.85.255.255 (Debian Bug#136303)
+#		    added 211.32.0.0-211.39.255.255 (Debian Bug#136333)
+#		    added 210.96.0.0-210.97.191.255 (Debian Bug#136631)
+#		    added 210.178.0.0-210.183.255.255 (Debian Bug#137599)
+#		    added 211.212.0.0-211.215.255.255 (Debian Bug#137724)
+#		    APNIC:
+#		    added 218.0.0.0-218.255.255.255 (Debian Bug#137386)
+# 2002-02-17  jule  added .hk (Debian Bug#131390)
+#		    added 211.0/13 to JPNIC (Debian Bug#134148)
+#		    added 211.21/16 to TWNIC (Debian Bug#132727)
+#		    added .to (Debian Bug#132634)
+#		    added 211.172-211.199 to KRNIC (Debian Bug#130307)
+#		    added 203.224-203.244 to KRNIC (Debian Bug#130307)
+#	            added 211.104-211.119 to KRNIC (Debian Bug#130307)
+#                   added 210.92-210.95 to KRNIC (Debian Bug#130307)
+#		    added 211.232-211.255 to KRNIC (Debian Bug#130307)
+#		    added 61.96-61.112 to KRNIC (Debian Bug#130307)
+# 2002-02-01  jule  added .tv,.ua,.ug,.uy,.uz,.vu; changed .vi,.ws,adamsnames
+#		    (latter closes Debian Bug#131866)
+# 2002-01-17  jule  210.248/13 = jpnic (Debian Bug#129489)
+#	      jule  211.216/13 = krnic (Debian Bug#126637)
+#	      jule  61.72-61.77 = krnic (Debian Bug#119200)
+#	      jule  changed dk-nic (Debian Bug#129026)
+#	      jule  added ripe blocks 80/81
+#	      jule  added .info and .biz
+# 2001-03-12  lutz  whois.cira.ca is new for *.ca (Hanno Foest)
+#             lutz  Kasachstan does not respond (Jan Ludewig)
+#             lutz  whois.ncst.ernet.in for .in (no better match)
+#             lutz  .be brushed up (Andreas Schoenberg)
+# 2000-12-15  lutz  .in tested and failed.
+# 2000-09-14  jule  .tj added.
+#             jule  added io, jo, mn, mw, sh
+#             lutz  added sg (per Tip)
+# 2000-09-06  lutz  217/8 mapped to RIPE
+# 2000-08-08  lutz  .ws added (Found it in spam, this registry is evil)
+#             lutz  added several domains providing whois.nic.~tlh~ 
+# 2000-07-18  lutz  .at readded (pfeifer@dbai.tuwien.ac.at)
+# 2000-07-17  lutz  .hm added (jule)
+# 2000-06-29  lutz  -RIPE should do multiple queries. (jule)
+#             lutz  added whois.nic.at, whois.dk-hostmaster.dk, whois.nic.hu
+#             lutz  added -BE, -DOMREG at RIPE, whois.isoc.org.il
+# 2000-06-28  lutz  .is and -IS are supported by whois.isnet.is
+#             lutz  -DENIC is supported by whois.denic.de
+# 2000-06-27  lutz  .de will bot longer supported by ripe until tomorrow.
+#             lutz  whois.nic.de is renamed to whois.denic.de
+# 2000-06-26  lutz  domain-registry.nl renamed to whois.domain-registry.nl
+#                   (ash@ash.de)
+# 2000-06-20  lutz  .no, -NORID -> whois.norid.no
+# 2000-06-07  lutz  co??- -> corenic
+#                   nic.cx hat neuerdings whois!
+# 2000-03-27  lutz  core- -> corenic (ash@ash.de)
+# 2000-02-29  lutz  registro.br hat neuerdings whois! IP Netze gehen auch.
+#             lutz  Added my
+# 2000-02-24  lutz  RIPE-IPs vervollständigt
+# 2000-02-15  haegar COCO- => whois.corenic.net
+# 2000-02-14  lutz  -HST => arin
+# 2000-02-07  lutz  210.160.0.0 - 210.175.255.255 => Japan
+#             jule  adamsnames changed
+#             jule  213/8 => Ripe
+# 1999-12-01  jule  .com/.net/.org changed to two-step whois
+# 1999-08-04  lutz  Added gs, ms, tc, tf, vg
+# 1999-08-03  lutz  Added sm
+# 1999-07-05  lutz  Fixed 203.178-203.183
+# 1999-07-01  lutz  Fixed kr, Added IPv6
+# 1999-04-12  jule  Added tr
+#             lutz  Added va
+# 1999-04-01  lutz  Fixed 160.44-160.63
+# 1999-03-30  jule  Added md
+# 1999-03-29  lutz  Added AS...
+# 1999-03-04  lutz  Fixed es, se
+#                   Added cx, eu.org
+# 1998-12-18  jule  Extracted from orginal source
+# --------------------------------------------------------------------

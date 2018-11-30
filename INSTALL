@@ -1,0 +1,8 @@
+
+  1. Copy pattern into /etc/gwhois/
+  2. Copy gwhois into /usr/bin/
+  3. Copy gwhois.1 into /usr/share/man/man1/
+
+
+  gwhois needs lynx, curl and LWP::Simple. And perl of course.
+

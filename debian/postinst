@@ -1,0 +1,52 @@
+#!/bin/sh
+# postinst script for gwhois
+set -e
+. /usr/share/debconf/confmodule
+
+case "$1" in
+  configure)
+  db_get gwhois/inetd
+  if [ "$RET" = "true" ]; then
+    if [ "$(which update-inetd)" != "" ]; then
+      update-inetd --add 'whois	 	stream	tcp 	nowait	nobody	/usr/bin/gwhois gwhois'
+    else
+      db_input high gwhois/noinetd
+      db_go
+    fi
+  else
+    if [ "$(which update-inetd)" != "" ]; then
+      update-inetd --pattern gwhois --remove whois 2>&1 >/dev/null
+    fi
+  fi
+
+  # delete old stuff
+  if [ -f "/etc/gwhois/pattern.apnic-erx" ]; then
+    md5sum=`md5sum </etc/gwhois/pattern.apnic-erx`
+    if [ "$md5sum" = "e8be636f559802c54d4dcf89e374296b  -" ]; then
+      rm /etc/gwhois/pattern.apnic-erx
+    fi
+  fi
+
+  if [ -f "/etc/gwhois/pattern.lacnic-erx" ]; then
+    md5sum=`md5sum </etc/gwhois/pattern.lacnic-erx`
+    if [ "$md5sum" = "df6148697584ac98f7fe2bb7e59537a9  -" ]; then
+      rm /etc/gwhois/pattern.lacnic-erx
+    fi
+  fi
+
+  if [ -f "/etc/gwhois/pattern.ripe-erx" ]; then
+    md5sum=`md5sum </etc/gwhois/pattern.ripe-erx`
+    if [ "$md5sum" = "13910064af2b2d390e6e5d3ee6a7b151  -" ]; then
+      rm /etc/gwhois/pattern.ripe-erx
+    fi
+  fi
+  ;;
+  abort-upgrade|abort-remove|abort-deconfigure)
+  ;;
+  *)
+  echo "postinst called with unknown argument \`$1'" >&2
+  exit 0
+  ;;
+esac
+
+##DEBHELPER##

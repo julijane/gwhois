@@ -1,0 +1,20 @@
+gwhois (20050114) unstable; urgency=low
+
+  Beginning with the 20040307 version, gwhois was delivered with some quite
+  extensive lists of ERX (early registration) network blocks. These lists
+  slowed down gwhois in an unacceptable way. Therefore these lists are
+  removed with the 20050103 version, and we rely on the ARIN redirect feature.
+
+  Gwhois will no longer read the old configuration files. The debian package
+  will delete the old files (when not modified) automatically (with a 
+  warning), on other systems you need to delete them yourself. The files in
+  question are:
+
+  /etc/gwhois/pattern.apnic-erx
+  /etc/gwhois/pattern.lacnic-erx
+  /etc/gwhois/pattern.ripe-erx
+
+  Beginning with the 20050114 version gwhois uses curl for some (mainly
+  https) URLs. It is planned to replace this with libwww-perl later.
+
+ -- Juliane Holzt <debian@julijane.de>  Fri, 14 Jan 2005 22:38:20 +0100

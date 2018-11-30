@@ -1,0 +1,24 @@
+#!/bin/sh
+# prerm script for gwhois
+set -e
+. /usr/share/debconf/confmodule
+
+case "$1" in
+  remove)
+  db_get gwhois/inetd
+  if [ "$RET" = "true" ]; then
+    if [ "$(which update-inetd)" != "" ]; then
+      update-inetd --pattern gwhois --remove whois 2>&1 >/dev/null
+    fi
+  fi 
+  rm -f /etc/default/gwhois
+  ;;
+  upgrade|failed-upgrade|deconfigure)
+  ;;
+  *)
+  echo "prerm called with unknown argument \`$1'" >&2
+  exit 0
+  ;;
+esac
+
+##DEBHELPER##

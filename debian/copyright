@@ -1,0 +1,31 @@
+This package is a native debian package, and was first packaged
+for debian by Juliane Holzt <debian@julijane.de> on Sun, 
+10 Dec 2000 21:04:44 +0100. Additional to beeing in the debian archives, 
+current sources can also be found on http://gwhois.de/.
+
+Author and current Maintainer: 
+   Juliane Holzt <debian@julijane.de>
+
+Previous Co-Author:
+   Lutz Donnerhacke <Lutz.Donnerhacke@Jena.Thur.De>
+
+
+Copyright:
+
+Copyright (c) 1998-2009 by Juliane Holzt and contributors
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; version 2 only.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software Foundation, 
+Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+
+On any Debian system, you can find the complete text of the GNU GPL
+(GNU General Public License) in the file /usr/share/common-licenses/GPL-2

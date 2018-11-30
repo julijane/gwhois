@@ -1,0 +1,22 @@
+Template: gwhois/inetd
+Type: boolean
+Default: false
+_Description: Install gwhois as a whois proxy server?
+ If gwhois is installed as a whois proxy server (using inetd) it
+ will listen on the standard whois port (43) allowing normal
+ whois clients to query it.
+ .
+ This can be interesting for example if you want to setup a generic whois
+ server for your company or coworkers which can then use their standard
+ whois-client (e.g. a windows client) and still make use of the intelligent
+ features of gwhois.
+
+Template: gwhois/noinetd
+Type: error
+_Description: Inetd or compatible replacement not installed.
+ You configured gwhois to act as a whois proxy server. This
+ requires inetd or a compatible replacement (in particular the
+ 'update-inetd' binary) which was not found.
+ .
+ Please install a package providing inet-superserver and
+ reconfigure gwhois or disable proxy operation.

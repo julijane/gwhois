@@ -1,0 +1,31 @@
+.TH gwhois 1 "19 Jan 2002" Linux "User Manuals"
+.SH NAME
+gwhois \- generic whois client / server
+.SH SYNOPSIS
+.B gwhois <query>
+.SH DESCRIPTION
+gwhois is a generic whois client. It strives to know for all existing
+tlds and all ip address ranges the appropiate whois server to ask. You
+can simply call gwhois with a query for some domain or some ip and it
+will ask the right server for you! It can even query webforms which
+are unfortunately the only query type supported by many bad registries.
+
+gwhois can also be used as a whois server. You can call it from the
+inetd and make it accessable via a normal standard whois client. This
+allows for example using a windows client and still make use of the
+enhanced features of gwhois.
+.SH FILES
+.TP
+.IB /etc/gwhois/pattern
+The pattern file of gwhois. Contains the list of domain and ip to
+server mappings. It is in a machine readable regexp format but should
+be easy to understand by humans, too. If you have additions and
+corrections please report them always to the authors!
+.TP
+.IB /etc/gwhois/debconf.inc
+File created depending on debconf question sending mail. Please do
+not change manually but instead use dpkg-reconfigure!
+.SH AUTHOR
+Juliane Holzt <debian@julijane.de>
+.SH VERSION
+20100515

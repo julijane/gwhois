@@ -1,0 +1,48 @@
+Since a few months queries to RIPE only outputs shortened listings
+by default. This is in principal a good step, as the missing 
+information was often misunderstood and/or misused by clueless users.
+
+gwhois will therefore NOT circumvent that protection by adding the
+needed query flag automatically. However if you want to have that
+flag added, you can apply the following patch to your pattern file.
+But please do not make such a gwhois instance accessable by public.
+
+--- pattern	2007-02-17 00:07:57.000000000 +0100
++++ pattern.ripe	2007-02-17 00:08:19.000000000 +0100
+@@ -3,6 +3,9 @@
+ 
+ # Redirect-Targets (for specifying query modifiers)
+ # --------------------------------------------------------------------
++:whois|whois.ripe.net|prefix=-B |
++redirect:whois.ripe.net
++
+ :none||
+ ^redirect:
+ 
+@@ -10,7 +13,7 @@
+ # --------------------------------------------------------------------
+ 
+ # RIPE
+-:whois|whois.ripe.net
++:whois|whois.ripe.net|prefix=-B |
+ =24.132/14
+ =62/8
+ =77/8
+@@ -176,7 +179,7 @@
+ 2001:((0[23cdef]|4[45]|[89a])[0-9a-f][0-9a-f]|[23cdef][0-9a-f][0-9a-f][^0-9a-f])
+ 
+ # ripe v6
+-:whois|whois.ripe.net
++:whois|whois.ripe.net|prefix=-B |
+ 2001:((0[6789ab]|1[4567abcdef]|2[0-9a-f]|3[012345689ab]|4[0167abcd]|5[0-9a-f])[0-9a-f][0-9a-f]|[6789ab][0-9a-f][0-9a-f][^0-9a-f])
+ 2a01:0[01][0-9a-f][0-9a-f]:
+ 2a01:[01][0-9a-f][0-9a-f]:
+@@ -1135,7 +1138,7 @@
+ :whois|whois.ripn.net
+ -ripn$
+ 
+-:whois|whois.ripe.net
++:whois|whois.ripe.net|prefix=-B |
+ ^lim-
+ ^poem-
+ -mnt$
